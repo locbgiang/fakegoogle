@@ -18,7 +18,9 @@ export const ResultContextProvider = ({children}) => {
                 'X-RapidAPI-Host': 'google-search3.p.rapidapi.com'
             }
         });
-        const date = await response.json();
+        const data = await response.json();
+
+        console.log(data)
         setResults(data);
         setIsLoading(false);
     }
